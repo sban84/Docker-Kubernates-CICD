@@ -7,6 +7,8 @@ class Calculator:
         self.y = y
 
     def add(self, x, y):
+        print(self.x)
+        print(self.y)
         return self.x + self.y
 
     def subtract(self, x, y):
