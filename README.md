@@ -1,7 +1,7 @@
 # Understand more Git version control
 
 -- git commands 
-###Basic Initial commands
+### Basic Initial commands
 ```
 git checkout -b "feature"
 git status
@@ -35,7 +35,21 @@ git log --stat
      main.py    | 20 ++++++++++++++++++++
      2 files changed, 21 insertions(+)
 
+#### To get updated changes in a branch
+```
+// To get updated changes in a branch 
 
+git checkout feature
+git pull 
+
+OR 
+git fetch origin/feature
+git status
+git rebase -i origin/feature
+git status
+
+
+```
 ###1. modify the latest commit message 
 
 ####1.1
