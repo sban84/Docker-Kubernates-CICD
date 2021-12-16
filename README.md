@@ -148,7 +148,8 @@ git push --force-with=lease
 and select "Fixup" , commit 
 4. now select the just previous commit ( before the fixup) and select "Interactively rebase from here"
 and click Squash and click outside
-5. Click "Start Rebase"
+   
+5. Click "Start Rebase" and see "Rebase Successful.." message
 6. In Terminal 
 ```
 git push origin feature
