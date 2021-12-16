@@ -103,7 +103,34 @@ git checkout feature
 git cherry-pick c0ce53f73e04
 ````
 ###3.1 pick selected files from the latest commit  into older commit ( solution is check-pick)
-TODO
+
+
+This is using IntelliJ / PyCharm IDE 
+
+Scenario 1 #
+
+Suppose we wanted to choose a file from a another commit from same branch 
+lets say we are doing this operation in feature branch.
+
+1. Open the git log in in IDE 
+2. Select the commit where we wanted to add and right click and select "Interactively Rebase from here"
+and a new window will open and there click one || / pause button by selecting the same commit.
+![img_2.png](img_2.png)
+   
+3  Now back to the git log window and select the commit from where the changes are need to be picked up.
+and select the file(s) and select "Cherry-Pick" 
+
+![img_3.png](img_3.png)
+
+and new window just select the checkbox and click "Amend" and Provide the message and 
+click on "Commit" 
+
+
+4. Terminal 
+```
+git push --force-with=lease
+
+```
 
 ###4. Remove a commit from the branch 
 
