@@ -94,22 +94,23 @@ git commit --amend
 
 
 
-###3. pick all files from any other branch's commit  into a specific branch ( solution is check-pick)
-
+###3. pick all files from any other branch's commit  into a specific branch ( solution is cherry-pick)
+```
 git checkout master 
 git log 
 get the commit hash_id which needs to be picked up
 git checkout feature
 git cherry-pick c0ce53f73e04
-
-###3.1 pick selected files from any other branch's commit  into a specific branch ( solution is check-pick)
+````
+###3.1 pick selected files from the latest commit  into older commit ( solution is check-pick)
 TODO
 
 ###4. Remove a commit from the branch 
 
 get the commit hash_id which needs to be made as HEAD for that branch, i.e c0ce53f73e04 is commit that we need to remove permamnetly and previous commit to that is d2ea98e
 
-```git checkout <branch_name>
+```
+git checkout <branch_name>
 git reset --hard <commit_id_current_head>
 
 // to clean untracked file 
