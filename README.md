@@ -43,12 +43,21 @@ git checkout feature
 git pull 
 
 OR 
-git fetch origin/feature
+git fetch origin feature
 git status
 git rebase -i origin/feature
 git status
 
+AND for master
 
+git checkout master
+git fetch origin master
+git rebase -i origin/master
+git status
+
+// To confirm
+git pull 
+// Already up to date.
 ```
 ###1. modify the latest commit message 
 
