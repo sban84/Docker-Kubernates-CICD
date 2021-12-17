@@ -95,14 +95,22 @@ git commit --amend
 
 
 ###3. pick all files from any other branch's commit  into a specific branch ( solution is cherry-pick)
+### Very useful for Hot Fix
 ```
 git checkout master 
 git log 
 get the commit hash_id which needs to be picked up
 git checkout feature
 git cherry-pick c0ce53f73e04
+
+git status 
+git checkout branch hotfix_using_cherry_pick
+git checkout hotfix_using_cherry_pick
+git push orign hotfix_using_cherry_pick
 ````
 ###3.1 pick selected files from the latest commit  into older commit ( solution is check-pick)
+
+
 
 
 
@@ -133,6 +141,25 @@ git push --force-with=lease
 
 ```
 
+###3.2 Add small changes to existing commit already pushed commit, in IntelliJ 
+1. Switch the branch in IntelliJ to feature
+2. Code change 
+3. go to git log option in IntelliJ and click the commit ( latest / old),
+and select "Fixup" , commit 
+4. now select the just previous commit ( before the fixup) and select "Interactively rebase from here"
+and click Squash and click outside
+   
+5. Click "Start Rebase" and see "Rebase Successful.." message
+6. In Terminal 
+```
+git push origin feature
+
+OR 
+
+git push --force-with-lease
+```
+
+
 
 ###4. Remove a commit from the branch 
 
@@ -147,7 +174,7 @@ git clean -df
 ```
 
 
-###5. to get a commit which is been removed by git reset --hard command , 
+###5. To get a commit which is been removed by git reset --hard command , 
 
 ```
 git reflog 
@@ -222,4 +249,5 @@ git push --force-with-lease
 ```
 
 ![img.png](img.png)
+
 
