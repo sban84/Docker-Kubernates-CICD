@@ -231,15 +231,22 @@ git push origin <branch_name>
 
 get the all latest changes / commits from master into feature branch 
 
-````git checkout feature
+````
+git checkout feature
 git fetch origin master 
 git rebase -i origin/master
 
 // a window will open just quit
-// this will get all the changes from master from the point feature is created and on top of that it will //replay all the subsequent commits from featire branch and create a upto date feature branch  will all //commits visible clearly. 
+// this will get all the changes from master from the point feature is created and on top of that it will 
+//replay all the subsequent commits from featire branch and create a upto date feature branch  will all //commits visible clearly. 
+
+git add . 
+git commit -v
+git push --force-with-lease
+
 ````
 /*
-NOTE : this may results conflicts BUT DONT WORRY 
+NOTE : this may result conflicts BUT DON'T WORRY 
 Auto-merging main.py
 CONFLICT (content): Merge conflict in main.py
 error: could not apply 94409dd... feat(calculator): add THE subtract function
@@ -252,7 +259,8 @@ Could not apply 94409dd... feat(calculator): add THE subtract function
 
 resolve the conflicts from using IDE 
 
-```git add . 
+```
+git add . 
 git commit -v
 git push --force-with-lease
 ```
