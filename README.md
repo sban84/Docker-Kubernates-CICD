@@ -105,6 +105,7 @@ git cherry-pick c0ce53f73e04
 ###3.1 pick selected files from the latest commit  into older commit ( solution is check-pick)
 
 
+
 This is using IntelliJ / PyCharm IDE 
 
 Scenario 1 #
@@ -131,6 +132,7 @@ click on "Commit"
 git push --force-with=lease
 
 ```
+
 
 ###4. Remove a commit from the branch 
 
